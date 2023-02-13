@@ -142,10 +142,10 @@ console.log ("10 || 0 && 'dog' || ''", 10 || 0 && 'dog' || ''); //10
 
 // Оператор НЕ !
 
-const UserNam = prompt("Як вас звати?");
-if (!UserNam) {
-    alert("Ви не ввели ім'я!");
-}
+//const UserNam = prompt("Як вас звати?");
+//if (!UserNam) {
+//    alert("Ви не ввели ім'я!");
+//}
 
 // Оператори порівняння
 //рівнісь не залежно від типу
@@ -196,22 +196,22 @@ if (isActive) {
 }
 
 
-const a = 56;
-const b = 10;
-const condition = a > b;
-if (condition) {
-    alert(" a більше ніж b");
-}
+//const a = 56;
+//const b = 10;
+//const condition = a > b;
+//if (condition) {
+//    alert(" a більше ніж b");
+//}
 
-let type;
-const age = 20;
+//let type;
+//const age = 20;
 
-if (age >= 18) {
-  type = "adult";
-} else {
-  type = "child";
-}
-console.log(type); // "adult"
+//if (age >= 18) {
+//  type = "adult";
+//} else {
+//  type = "child";
+//}
+//console.log(type); // "adult"
 
 
 
@@ -240,7 +240,7 @@ console.log(type); // "adult"
 
 //ELSE, ELSE IF
 
-const currentYear = 2023;
+//const currentYear = 2023;
 
 //const userAnswer = Number(prompt (" What year is now?"));
 //if (userAnswer === currentYear) {
@@ -270,55 +270,223 @@ const currentYear = 2023;
 //}
 
 
-const number = 19;
+//const number = 19;
 
-if (number === 10) {
-    console.log("Число рівне 10");
-} else if (number > 10 && number <= 20) {
-    console.log("Чиcло більше 10");
-} else if (number >20 && number < 30) {
-    console.log("Число більше 20 і менше 30")
-} else {
-    console.log("Число більше 30")
-}
+//if (number === 10) {
+  //  console.log("Число рівне 10");
+//} else if (number > 10 && number <= 20) {
+//    console.log("Чиcло більше 10");
+//} else if (number >20 && number < 30) {
+ //   console.log("Число більше 20 і менше 30")
+//} else {
+ //   console.log("Число більше 30")
+//}
 
 //SWITCH
 
-const studentMark = Number(prompt("Введіть оцінку: "));
+//const studentMark = Number(prompt("Введіть оцінку: "));
 
-switch (studentMark) {
-    case 5:
-        alert("Прекрасно!");
-        break;
-    case 4:
-        alert ("Добре!");
-        break;
-    case 3:
-    case 2:
-    case 1:
-        alert("Не дуже добре :(");
-    break;
-    default:
-        alert("Не знаю такої оцінки");
-    }
+//switch (studentMark) {
+   // case 5:
+        //alert("Прекрасно!");
+       // break;
+    //case 4:
+       // alert ("Добре!");
+       // break;
+    //case 3:
+    //case 2:
+    //case 1:
+        //alert("Не дуже добре :(");
+    //break;
+    //default:
+       // alert("Не знаю такої оцінки");
+    //}
 
     //Тернарний оператор (? :)
-    const Number = Number(prompt("Enter your number: "));
-    const result = number >= 10 ? "The Number is more than 10" : "The Number is less than 10";
-    console.log('result', result);
+    //const Number = Number(prompt("Enter your number: "));
+    //const result = number >= 10 ? "The Number is more than 10" : "The Number is less than 10";
+    //console.log('result', result);
 
-    let result2;
-    if (number > 10) {
-        result2 = "The Number is more than 10";
-    } else {
-        result2 = "The Number is less than 10";
+    //let result2;
+    //if (number > 10) {
+    //    result2 = "The Number is more than 10";
+    //} else {
+    //    result2 = "The Number is less than 10";
+    //}
+   // console.log('result' , result2);
+
+
+//FUNCTIONS
+// functionn імяФункції() {
+// ... код який знаходиься в функції
+//}
+
+    //оголошення функції
+//function showMessage() {
+    //тіло функції, виконаєтться при виклику
+//console.log("Привіт із функції!");
+//}
+
+//виклик функції
+//showMessage();
+
+
+
+//function getSum() {
+ //   const num1 = Number(prompt ("Перше число:"));
+ //   const num2 = Number(prompt ("Друге число:"));
+
+  //  const sum = num1 + num2;
+   // alert("Сума: " + sum);
+//}
+
+//getSum()
+//getSum()
+
+//function sayHallo(){
+   // const message = "hello";
+   // console.log('message', message);
+//}
+//sayHallo();
+
+
+
+let userName = "";
+function getUserName() {
+    console.log('userName', userName);
+
+    if (!userName) {
+        userName = prompt("Як тебе звати?");
     }
-    console.log('result' , result2);
+}
+getUserName();
+console.log('userName', userName)
+
+let login = "user1";
+
+function getLogin() {
+    let login = "admin2";
+
+    login = prompt("ВВедіть логін");
+    console.log('login локальна', login);
+}
+
+getLogin();
+console.log('login глобальна', login);
+
+//Аргументи (параметри) функції
+
+const number1 = 10;
+const number2 = 20;
+const a = 100;
+const b = 200;
+
+function add(a,b) {
+    console.log ('a', a);
+    console.log('b',b);
+
+    const sum = a + b;
+    console.log('sum', sum);
+}
+
+add(1, 3);
+add(number1, number2);
+add(b, a);
+
+// Повернення результату з функції RETURN
+
+function getNumber() {
+    return 8;
+}
+
+const number = getNumber();
+console.log('number', number);
 
 
+function getFullUserName(name, surname) {
+    const result = name + " " + surname;
+    return result;
+}
+
+const fullName = getFullUserName("John", "Brown");
+console.log('fullName', fullName);
+
+/////
+function max(a, b) {
+    return a > b ? a : b;
+}
+console.log ('max(10, 12)', max(10, 12))
 
 
+//////
+function getSum(a, b) {
+    console.log("Старт функції");
+    if (
+        !a
+        || !b
+        || typeof a !== "number"
+        || typeof b !== "number"
+    ){
+    console.log("Дані невірні");
+    console.log("Return");
+    return;
+    }
+
+    console.log(" Повертаємо суму");
+    return a + b;
+}
+console.log("Перед викликом функції")
+const sumResult = getSum(1, 2);
+console.log('sumResult' , sumResult) 
+console.log("Після виклику функції")
 
 
+//Аргументи по замовчуванню
+
+function showText(text = 'No text') {
+    console.log(text)
+}
+showText('Hello, World');
+showText()
 
 
+function getChatText(text, name = 'Гість'){
+    return name + ": " + text;
+}
+
+console.log(
+    'getChatText("Привіт", "Марія")',
+     getChatText("Привіт", "Марія")
+);
+console.log(
+    'getChatText("Хай")',
+    getChatText("Хай"),
+);
+
+function calculate(operation, a = 0, b = 0) {
+    console.log('a' , a);
+    console.log('b' , b);
+    console.log('operation', operation);
+
+    if (operation === "plus") {
+        return a + b;
+    } else if (operation === "minus") {
+        return a - b;
+    }
+    }
+calculate ('plus');
+
+// ARROW FUNCTIONS
+//Стрілочна функція
+
+//function sum(a, b) {
+    //return a + b;
+//}
+
+// const sum = (a, b) => {
+    //return a + b
+    //}
+
+const sum = (a, b) => a + b;
+const res1 = sum(4, 5)
+console.log('res1', res1)
