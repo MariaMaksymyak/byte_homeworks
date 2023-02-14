@@ -54,10 +54,6 @@ console.log('sumResult' , sumResult)
 
 
 
-
-   
-
-
 //Задание 3
 
 //Напишите функцию для возведения числа в степень
@@ -97,20 +93,26 @@ function getExponention(x, n)
 //yourFunction(6) // Суббота
 //yourFunction(10) // Такого дня нет
 
+const numberDayoftheWeek = Number(prompt ("ВВедіть число щоб дізнаися назву дня тижня:  "));
 
 
-let Day = function (day){
-    switch (day) {
-        case 1: return "понеділок";
-        case 2: return "вівторок";
-        case 3: return "середа";
-        case 4: return "четвер";
-        case 5: return "п'ятниця";
-        case 6: return "субота";
-        case 7: return "неділя";
-        default: return "Такого дня немає"
+    switch (numberDayoftheWeek) {
+       case 1: alert("Понеділок");
+       break
+        case 2: alert( "вівторок");
+        break;
+        case 3: alert("середа");
+        break;
+        case 4: alert( "четвер");
+        break;
+        case 5: alert( "п'ятниця");
+        break;
+        case 6: alert("субота");
+        break;
+        case 7: alert( "неділя");
+        break;
+        default: alert("Такого дня немає");
     }
-}
 
 //Задание 5* (необязательное)
 
@@ -120,3 +122,21 @@ let Day = function (day){
 //Здавствуйте, <Имя Пользователя>
 //Если меньше, сообщением будет Привет, <Имя Пользователя> 
 //(в треугольных скобках должно быть значение имени, введенной пользователем)
+
+
+function getUserName() {
+const userNickname = prompt("Your nickname?");
+const userAge = prompt("How old are you?");
+  
+  if (userAge >= 30) {
+      alert ("Здравствуйте " + userNickname );
+  } else {
+     alert ("Привет " + userNickname );
+  }}
+  getUserName()
+
+
+
+
+
+

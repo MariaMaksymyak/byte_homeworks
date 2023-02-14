@@ -490,3 +490,175 @@ calculate ('plus');
 const sum = (a, b) => a + b;
 const res1 = sum(4, 5)
 console.log('res1', res1)
+
+
+//LOOPS
+
+//FOR
+// for (старт (лічильник); умова; крок лічильника;) {
+    // код який треба виконати багато раз}
+
+console.log("Цикл плчав роботу");
+
+for (let i = 0; i <5; i++) {
+    console.log('Лічильник (i): ', i);
+    console.log('Умова ${i} <5:' , i <5); 
+}
+console.log("Цикл закінчив роьботу")
+
+for (let i =2; i <= 2048; i = i * 2) {
+    //outputs 0, then 1, then 2
+    console.log('i', i)
+}
+
+//Створимо лічильник
+let counter = 0;
+
+while (counter < 10) {
+  console.log("counter: ", counter);
+  counter += 1;
+}
+
+//for (let i = 2, j = 1; j < 20; i = i * 2, j++) {
+  //  console.log('2 в степені ${j} = ${j} = ${i}');
+//}
+
+for(let i = 0; i < 20; i++) {
+    const power = 2 ** i;
+    //console.log('2 в степені ${i} = ${power}');
+    const res = "2 в сепені " + i + ' = ' + power
+    console.log(res)
+}
+
+//Порахуємо суму чисел до певного значення.
+const target = 3;
+let suma = 0;
+
+for (let i = 0; i <= target; i += 1) {
+  suma += i;
+}
+
+console.log(sum);
+
+
+//Згадаємо про операцію a % b і виведемо остачу від ділення 
+//за допомогою циклу.
+//const max = 10;
+//for (let i = 0; i < max; i += 1) {
+ // console.log(`${max} % ${i} = `, max % i);
+//}
+
+
+
+
+// Зупинка циклу і пропуск інтеграції
+// break
+
+//const findFirstNumber = (start, finish, divider) => {
+    //let targetNumber;
+    //for (let i = start; i <= finish; i++ ){
+        //if (i % divider === 0) {
+            //targetNumber = i;
+           // break;
+        //}
+    //}
+    //return targetNumber;
+//}
+//const result = findFirstNumber(10, 50, 9)
+//console.log('result', result)
+
+const findFirstNumber = (start, finish, divider) => {
+    for (let i = start; i <= finish; i++ ) {
+        console.log('i' , i)
+        if (i % divider === 0) {
+            return i
+        }
+    }
+};
+const result = findFirstNumber(10, 50, 9)
+console.log('result', result)
+
+//CONTINUE
+
+//const showEvenNumbers = (start, finish) => {
+    //for (let i = start; i <= finish; i++) {
+        //if (i % 2 !== 0) {
+         //   continue;
+        //}
+        //console.log(i);
+    //}
+//};
+
+
+const showEvenNumbers = (start, finish) => {
+    for (let i = start; i <= finish; i++) {
+        if (i % 2  === 0) {
+        console.log(i);
+    }
+}
+};
+showEvenNumbers(2,20)
+
+
+//Вкладені цикли
+
+//(табличка множення)
+for (let i =1; i <= 9; i++) {
+    let row = "";
+    for (let j = 1; j <= 9; j++) {
+        //consle.log('i, j', i,j);
+        row = row + (i * j) + " ";
+    }
+    console.log(row);
+}
+
+
+//ЦИКЛИ ЦЕ ШВИДКО
+console.time('Loop');
+
+for (let i = 0; i < 10000000; i++) {
+    // const a = 2 * i;
+}
+
+console.timeEnd('Loop');
+
+// WHILE, DO WHILE
+// while (виконуєься умова){
+    // вираз
+    //
+//}
+
+//Будемо заповнювати місця в готелі доти, 
+//доки поточна кількість клієнтів не буде дорівнювати 
+//максимально можливій.
+
+let clientCounter = 18;
+const maxClients = 25;
+
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
+
+
+let password = "";
+
+do {
+  password = prompt("Введіть пароль довший 4-х символів", "");
+} while (password.length < 5);
+
+console.log("Ввели пароль: ", password);
+
+
+
+
+
+let logName;
+do {
+    logName = prompt("ВВедіть ім'я: ");
+    if(logName === null){
+        break;
+    }
+    console.log('logName', logName);
+} while (!logName);
+
